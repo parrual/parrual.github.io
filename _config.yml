@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/"
+baseurl: ""
 url: "https://parrual.github.io"
 title: Parrual Blog # site's title
 description: "대학원생 Archive" # used by search engines
