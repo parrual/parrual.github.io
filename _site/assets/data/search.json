@@ -1,0 +1,153 @@
+[
+  
+  {
+    "title"    : "테스트 포스팅",
+    "category" : "",
+    "tags"     : " Test, Post",
+    "url"      : "/2019/09/18/first-post.html",
+    "date"     : "September 18, 2019",
+    "excerpt"  : "H1\n\nH2\n\nH3\n\nH4\n\n\n  리스트 1\n  리스트 2\n\n\n\n  인용\n\n\n짧은 코드블럭\n\n\npublic static void main(String[] args) {\n\n    System.out.println(&quot;기본이지&quot;);\n}\n\n\n\n\nprint(&quot;python&quot;)\n\n\n",
+  "content"  : "H1\n\nH2\n\nH3\n\nH4\n\n\n  리스트 1\n  리스트 2\n\n\n\n  인용\n\n\n짧은 코드블럭\n\n\npublic static void main(String[] args) {\n\n    System.out.println(&quot;기본이지&quot;);\n}\n\n\n\n\nprint(&quot;python&quot;)\n\n\n"
+} ,
+  
+  {
+    "title"    : "Color Post",
+    "category" : "",
+    "tags"     : " Test, Color, Markdown",
+    "url"      : "/2019/05/18/color-post.html",
+    "date"     : "May 18, 2019",
+    "excerpt"  : "What a colorful post!\n\nThis is an idea that came from xukimseven/HardCandy-Jekyll \nlooking at this cheerful and colorful them, I wanted to enable something similar for mine.\n\nYou can go fork and star hers too! 😉\n\n\n\nHow does it work?\n\nBasically you...",
+  "content"  : "What a colorful post!\n\nThis is an idea that came from xukimseven/HardCandy-Jekyll \nlooking at this cheerful and colorful them, I wanted to enable something similar for mine.\n\nYou can go fork and star hers too! 😉\n\n\n\nHow does it work?\n\nBasically you need to add just one thing, the color:\n\n---\nlayout: post\ntitle: Color Post\ncolor: brown\n---\n\n\nIt can either be a html color like brown (which look like red to me). Or with the rgb:\n\n---\nlayout: post\ntitle: Color Post\ncolor: rgb(165,42,42)\n---\n\n\nThe background used is lineart.png from xukimseven you can edit it in the config file. \nIf you want another one, put it in /assets/img as well.\n\n  ⚠️ It’s a bit hacking the css in the post.html\n\n"
+} ,
+  
+  {
+    "title"    : "Markup: Syntax Highlighting",
+    "category" : "",
+    "tags"     : " code",
+    "url"      : "/2014/08/08/Markup-Syntax-Highlighting.html",
+    "date"     : "August 8, 2014",
+    "excerpt"  : "From Michael’s Rose Minimal Mistakes.\nSyntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming lan...",
+  "content"  : "From Michael’s Rose Minimal Mistakes.\nSyntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.\n\nGFM Code Blocks\n\nGitHub Flavored Markdown fenced code blocks are supported. To modify styling and highlight colors edit /_sass/syntax.scss.\n\n#container {\n  float: left;\n  margin: 0 -240px 0 0;\n  width: 100%;\n}\n\n\n1\n2\n3\n4\n5\n6\n7\n.highlight {\n  margin: 0;\n  padding: 1em;\n  font-family: $monospace;\n  font-size: $type-size-7;\n  line-height: 1.8;\n}\n\n\n&amp;lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&amp;gt;\n  {% if page.previous %}\n    &amp;lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;\n  {% endif %}\n  {% if page.next %}\n    &amp;lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;\n  {% endif %}\n&amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;\n\n\nmodule Jekyll\n  class TagIndex &amp;lt; Page\n    def initialize(site, base, dir, tag)\n      @site = site\n      @base = base\n      @dir = dir\n      @name = &#39;index.html&#39;\n      self.process(@name)\n      self.read_yaml(File.join(base, &#39;_layouts&#39;), &#39;tag_index.html&#39;)\n      self.data[&#39;tag&#39;] = tag\n      tag_title_prefix = site.config[&#39;tag_title_prefix&#39;] || &#39;Tagged: &#39;\n      tag_title_suffix = site.config[&#39;tag_title_suffix&#39;] || &#39;&amp;amp;#8211;&#39;\n      self.data[&#39;title&#39;] = &quot;#{tag_title_prefix}#{tag}&quot;\n      self.data[&#39;description&#39;] = &quot;An archive of posts tagged #{tag}.&quot;\n    end\n  end\nend\n\n\nCode Blocks in Lists\n\nIndentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., 1.). Usually this will mean indenting 3 spaces instead of 4.\n\n\n  Do step 1.\n  \n    Now do this:\n\n    def print_hi(name)\n  puts &quot;Hi, #{name}&quot;\nend\nprint_hi(&#39;Tom&#39;)\n#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.\n    \n  \n  Now you can do this.\n\n\nGitHub Gist Embed\n\nAn example of a Gist embed below.\n\n\n\nSource\n\n"
+} ,
+  
+  {
+    "title"    : "Generate a table of content",
+    "category" : "",
+    "tags"     : " toc.js, kramdown, Markdown, Customization",
+    "url"      : "/2013/12/12/Generate-a-table-of-content.html",
+    "date"     : "December 12, 2013",
+    "excerpt"  : "Test article, get the source on github.\n\nUsing Kramdown GFM \n\n\n\n  Using Kramdown GFM     \n      Basic Usage\n    \n  \n  Using toc.js    \n      Customize with toc.js        \n          Use with this jekyll template\n        \n      \n      Basic Usage\n  ...",
+  "content"  : "Test article, get the source on github.\n\nUsing Kramdown GFM \n\n\n\n  Using Kramdown GFM     \n      Basic Usage\n    \n  \n  Using toc.js    \n      Customize with toc.js        \n          Use with this jekyll template\n        \n      \n      Basic Usage\n      How it would look like\n    \n  \n\n\nBasic Usage\n\nYou need to put this at the beginning of the page where you want the table of content to be displayed\n\n* TOC\n{:toc}\n\n\nIt will then render the markdown and html titles (lines that begins with # or using the &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt; tages)\n\nUsing toc.js\n\nDemo display of jekyll-table-of-contents by ghiculescu.\n\n\n\n\nCustomize with toc.js\n\ntoc.js stands for table of content, it is a js plugin that generates automatically a table of content of a post.\n\nUse with this jekyll template\n\nIf you want to customize the theme it is up to you, you can add the toc.js file into the asset &amp;gt; js and add it into the page.html layout with:\n\n&amp;lt;script src=&quot;/assets/js/toc.js&quot; &amp;gt;&amp;lt;/script&amp;gt;\n\nThen you can use it as it is said on the repository.\n\nBasic Usage\n\nThe script requires jQuery. First, reference toc.js in templates where you would like to add the table of content. Then, create an HTML element wherever you want your table of contents to appear:\n\n&amp;lt;div id=&quot;toc&quot;&amp;gt;&amp;lt;/div&amp;gt;\n\n\nThen you put your post with titles and all like:\n\n## Title\n## Mid title 1\nThis is text on page one\n## Mid title 2\nThis is text for page two\n### Sub title 2.a\nSome more text\n\n\nThen at the end of your post, you call the .toc() function using:\n\n&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;\n$(document).ready(function() {\n    $(&#39;#toc&#39;).toc();\n});\n&amp;lt;/script&amp;gt;\n\n\nHow it would look like\n\n\n\n\n\n\n\n\n"
+} 
+  
+  ,
+  
+  {
+  
+  "title"    : "Ninja",
+  "category" : "",
+  "tags"     : " Lorem",
+  "url"      : "/portfolio/ninja",
+  "date"     : "April 8, 2014",
+  "excerpt"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu...",
+  "content"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Creative",
+  "category" : "",
+  "tags"     : " Ipsum",
+  "url"      : "/portfolio/safe",
+  "date"     : "August 16, 2014",
+  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
+  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\nUse this area of the page to describe your project. The icon above is part of a free icon set by Flat Icons. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Circus",
+  "category" : "",
+  "tags"     : " Ipsum",
+  "url"      : "/portfolio/circus",
+  "date"     : "September 1, 2014",
+  "excerpt"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu...",
+  "content"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Tower of Hanoi",
+  "category" : "",
+  "tags"     : " ",
+  "url"      : "/portfolio/hanoi",
+  "date"     : "September 1, 2014",
+  "excerpt"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu...",
+  "content"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Tic tac toe",
+  "category" : "",
+  "tags"     : " ",
+  "url"      : "/portfolio/tictactoe",
+  "date"     : "September 1, 2014",
+  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
+  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Cake",
+  "category" : "",
+  "tags"     : " Lorem, Ipsum, Portfolio",
+  "url"      : "/portfolio/cake",
+  "date"     : "September 27, 2015",
+  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
+  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\nUse this area of the page to describe your project. The icon above is part of a free icon set by Flat Icons. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Jekyll",
+  "category" : "",
+  "tags"     : " ",
+  "url"      : "/portfolio/jekyllblog",
+  "date"     : "May 26, 2017",
+  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
+  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Lorem Ipsum",
+  "category" : "",
+  "tags"     : " ",
+  "url"      : "/portfolio/submarine",
+  "date"     : "September 3, 2017",
+  "excerpt"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia...",
+  "content"  : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\nUse this area of the page to describe your project. The icon above is part of a free icon set by Flat Icons. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!\n\n"
+  
+} ,
+  
+  {
+  
+  "title"    : "Github",
+  "category" : "",
+  "tags"     : " Lorem, Portfolio",
+  "url"      : "/portfolio/gitlecture",
+  "date"     : "October 20, 2017",
+  "excerpt"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu...",
+  "content"  : "\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n\n"
+  
+} 
+  
+]
