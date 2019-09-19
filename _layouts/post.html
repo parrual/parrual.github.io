@@ -21,7 +21,7 @@ layout: default
   </section>
 
   <!-- Social media shares -->
-  {% include share_buttons.html %}
+  <!-- {% include share_buttons.html %} -->
 
    <!-- Tag list -->
   {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
@@ -30,11 +30,11 @@ layout: default
 </article>
 
 <!-- Disqus -->
-{% if site.theme_settings.disqus_shortname %}
+<!-- {% if site.theme_settings.disqus_shortname %}
 <div class="comments">
   {% include disqus.html %}
 </div>
-{% endif %}
+{% endif %} -->
 
 <!-- Post navigation -->
 {% if site.theme_settings.post_navigation %}

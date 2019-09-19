@@ -2,7 +2,7 @@
 layout: search
 title: Search
 permalink: /search/
-subtitle: "What are you looking for?"
+subtitle: "검색"
 feature-img: "assets/img/pexels/search-map.jpeg"
 icon: "fa-search"
 ---

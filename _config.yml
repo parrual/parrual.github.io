@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/"
+baseurl: ""
 url: "https://parrual.github.io"
 title: Parrual Blog # site's title
 description: "대학원생 Archive" # used by search engines
@@ -53,7 +53,7 @@ theme_settings:
 
   # Sharing options
   share_buttons:
-    facebook: true
+    facebook: 
     twitter: true
     tumblr:
     pinterest:
@@ -61,7 +61,7 @@ theme_settings:
     reddit: 
     linkedin:
     wordpress:
-    email: true
+    email: 
 
   # Scripts / Features 
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
@@ -89,20 +89,20 @@ theme_settings:
   # Open the "_sass > base" folder, and open "_variables.scss"
 
 # PAGINATION
-paginate: 5
+paginate: 20
 paginate_path: "blog/page:num"
 
 # AUTHORS
 authors:
   parrual:
     name: Parrual
-    avatar: "assets/img/avatars/sylhare_avatar.png"
+    avatar: "assets/img/avatars/parrual.png"
     url: "https://github.com/parrual"
 
 # PORTFOLIO
 collections:
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:name
 
 # BUILD SETTINGS
